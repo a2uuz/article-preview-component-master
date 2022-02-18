@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+.parent {
+  background-color: white;
+  max-width: 319px;
+  border-radius: .5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.drawer {
+  background: top/cover url("/images/drawers.jpg") no-repeat;
+  min-height: 22vh;
+  -webkit-filter: brightness(110%) contrast(90%);
+          filter: brightness(110%) contrast(90%);
+  border-radius: .5rem .5rem 0 0;
+}
+
+main, footer {
+  padding: .6rem 2rem;
+}
+
+main > * {
+  margin: .5rem;
+}
+
+h3 {
+  color: #48556a;
+}
+
+main p {
+  color: #6d7f97;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #48556a;
+  padding-bottom: 1.5rem;
+}
+
+footer .icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ecf2f8;
+}
+
+footer .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  margin-left: 1rem;
+}
+
+footer .info .date {
+  color: #9eafc2;
+}
+
+footer .share-icon {
+  background-color: rgba(158, 175, 194, 0.281);
+  padding: .4rem;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
