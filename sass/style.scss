@@ -8,10 +8,10 @@
 
 // colors
 
-$Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
-$Desaturated_Dark_Blue: hsl(214, 17%, 51%);
-$Grayis_Blue: hsl(212, 23%, 69%);
-$Light_Grayish_Blue: hsl(210, 46%, 95%);
+$Very_Dark_Grayish_Blue: #48556a;
+$Desaturated_Dark_Blue: #6d7f97;
+$Grayis_Blue: #9eafc2;
+$Light_Grayish_Blue: #ecf2f8;
 
 
 // fonts
@@ -39,7 +39,7 @@ body {
 
 .drawer {
 background: top/cover url('/images/drawers.jpg') no-repeat;
-min-height: 22vh;
+min-height: 22.8vh;
 filter: brightness(110%) contrast(90%);
 border-radius: .5rem .5rem 0 0;
 }
@@ -66,16 +66,17 @@ footer {
   align-items: center;
   justify-content: space-around;
   color: $Very_Dark_Grayish_Blue;
-  padding-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  
 
 
 .icon {
-  // background: center/cover url("/images/image-avatar.png") no-repeat;
-  display: block;
-  width: 40px;
-  height: 40px;
+  background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: 1px solid $Light_Grayish_Blue;
+ 
 }
 
 .info{
@@ -87,12 +88,13 @@ footer {
     color: $Grayis_Blue;
 }
 
-
 .share-icon{
 background-color: hsla(212, 23%, 69%, 0.281);
 padding: .4rem;
 border-radius: 1rem;
 }
-
+.share-icon:hover{
+  cursor: pointer;
 }
 
+}
