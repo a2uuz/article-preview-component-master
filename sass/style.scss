@@ -71,6 +71,7 @@ footer {
 
 
 .icon {
+  display: block;
   background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
   width: 35px;
   height: 35px;
@@ -88,8 +89,11 @@ footer {
     color: $Grayis_Blue;
 }
 
+.share{
+  position: relative;
+}
 .share-icon{
-background-color: hsla(212, 23%, 69%, 0.281);
+background-color: hsla(210, 4%, 73%, 0.226);
 padding: .4rem;
 border-radius: 1rem;
 }
@@ -97,4 +101,16 @@ border-radius: 1rem;
   cursor: pointer;
 }
 
+.share-icon:active{
+background-color: red;
+}
+
+.socials.active{
+position: relative;
+width: 10px;
+height: 10px;
+padding: 3rem;
+background-color: red;
+
+}
 }

@@ -73,6 +73,7 @@ footer {
 }
 
 footer .icon {
+  display: block;
   background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
   width: 35px;
   height: 35px;
@@ -91,13 +92,29 @@ footer .info .date {
   color: #9eafc2;
 }
 
+footer .share {
+  position: relative;
+}
+
 footer .share-icon {
-  background-color: rgba(158, 175, 194, 0.281);
+  background-color: rgba(183, 186, 189, 0.226);
   padding: .4rem;
   border-radius: 1rem;
 }
 
 footer .share-icon:hover {
   cursor: pointer;
+}
+
+footer .share-icon:active {
+  background-color: red;
+}
+
+footer .socials.active {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  padding: 3rem;
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

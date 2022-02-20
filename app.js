@@ -1,20 +1,38 @@
-const footer = document.querySelector('footer')
-const share = document.querySelector('.share-icon');
-const avatar = document.querySelector('.avatar');
-const info = document.querySelector('.info');
+// const footer = document.querySelector('footer')
+// const icon = document.querySelector('.icon');
+// const info = document.querySelector('.info');
+// const share = document.querySelector('.share-icon');
 
 
 // share.addEventListener('click', ()=>{
 
 
-// footer.style.backgroundColor = '#48556a'
-// footer.style.borderRadius = '0 0 .5rem .5rem'
+// footer.style.cssText = `
+// color: white;
+// background-color: #48556a;
+// border-radius: 0 0 .5rem .5rem;
+// `;
 
- 
-  
-//   avatar.insertAdjacentHTML(
-//     `afterbegin`,
-//     ` <strong>SHARE</strong>`
-//   )
+// icon.style.cssText = `
+// background: none;
+// width: 35px;
+// border: none;
+// font-size: 1rem;
+// color: #8282a9;
+// `;
 
-// })
+// if (icon.length < 0) {
+//   icon.insertAdjacentHTML (
+//   `afterbegin`,
+//   `<h4>SHARE</h4>` 
+//   )}
+//   else{
+    
+//   }
+
+
+
+
+// info.style.visibility = 'hidden'
+
+// });
