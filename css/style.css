@@ -118,11 +118,11 @@ footer .info .date {
 }
 
 .share-option {
-  position: absolute;
-  bottom: calc(24% + 58px);
-  right: 2%;
+  position: relative;
+  bottom: 8px;
+  right: 3px;
   color: white;
-  background-color: #48556a;
+  background-color: black;
   padding: .5rem;
   border-radius: .3rem;
   display: -webkit-box;
@@ -144,7 +144,7 @@ footer .info .date {
           box-shadow: 0 5px 20px -5px #0003;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  display: block;
+  visibility: hidden;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -154,9 +154,9 @@ footer .info .date {
   width: 10px;
   height: 10px;
   position: relative;
-  background-color: red;
-  top: 1px;
-  left: 4px;
+  background-color: #000000;
+  top: .8rem;
+  left: 4rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -169,13 +169,13 @@ footer .info .date {
 .share-option span {
   padding: 0 .5rem 0 .5rem;
   color: grey;
-  font-size: .5rem;
+  font-size: .4rem;
   letter-spacing: 5px;
 }
 
 .share-option.active {
   scale: 1;
-  display: block;
+  display: none;
 }
 
 .share-button {
