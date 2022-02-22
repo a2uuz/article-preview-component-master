@@ -18,12 +18,18 @@ $Light_Grayish_Blue: #ecf2f8;
 
 $font: 'Manrope', sans-serif;
 
+@mixin flex-center {
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+
 body {
   background-color: $Light_Grayish_Blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-center();
   height: 100vh;
   font-family: $font;
   font-size: 13px;
@@ -88,29 +94,78 @@ footer {
 .info .date{
     color: $Grayis_Blue;
 }
+}
+
+
 
 .share{
-  position: relative;
-}
-.share-icon{
-background-color: hsla(210, 4%, 73%, 0.226);
-padding: .4rem;
-border-radius: 1rem;
-}
-.share-icon:hover{
-  cursor: pointer;
+    @include flex-center();
 }
 
-.share-icon:active{
-background-color: red;
+.share-option{
+   position: absolute;
+  bottom: calc(24% + 58px);
+  right: 2%;
+    color: white;
+    background-color: $Very_Dark_Grayish_Blue;
+    padding: .5rem;
+    border-radius: .3rem;
+    @include flex-center();
+    flex-direction:row;
+
+     box-shadow: 0 5px 20px -5px #0003;
+  transform-origin: bottom;
+  display: block;
+  transition: all 0.25s ease;
+
+
+
+    &::before{
+        content: '';
+        width: 10px;
+        height:10px;
+        position: relative;
+        background-color: red;
+        top: 1px;
+        left: 4px;
+        transform: rotate(45deg);
+    }
+
+
+     .socials{
+        padding-right: .5rem;
+        width: 20px;
+     }
+
+
+     span {
+        padding: 0 .5rem 0 .5rem;
+        color: grey;
+        font-size: .5rem;
+        letter-spacing: 5px;
+    }
+  }
+
+.share-option.active {
+  scale: 1;
+  display:block;
 }
 
-.socials.active{
-position: relative;
-width: 10px;
-height: 10px;
-padding: 3rem;
-background-color: red;
+.share-button{
+background-color: $Light_Grayish_Blue;
+width: 25px;
+height: 25px;
+@include flex-center();
+text-align: center;
+border-radius: 50%;
+cursor: pointer;
 
 }
+
+.share-button:hover{
+    background-color: $Desaturated_Dark_Blue;
+}
+
+ path:hover{
+  fill: white;
 }
