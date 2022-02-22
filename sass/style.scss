@@ -67,9 +67,9 @@ main p{
 }
 
 footer {
-  display: flex;
+  @include flex-center();
   min-height: 6vh;
-  align-items: center;
+ flex-direction: row;
   justify-content: space-around;
   color: $Very_Dark_Grayish_Blue;
   padding: 1rem 2rem;
@@ -169,3 +169,5 @@ cursor: pointer;
  path:hover{
   fill: white;
 }
+
+
