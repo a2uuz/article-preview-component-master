@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // colors
@@ -13,19 +13,17 @@ $Desaturated_Dark_Blue: #6d7f97;
 $Grayis_Blue: #9eafc2;
 $Light_Grayish_Blue: #ecf2f8;
 
-
 // fonts
 
-$font: 'Manrope', sans-serif;
+$font: "Manrope", sans-serif;
 
 @mixin flex-center {
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @content;
 }
-
 
 body {
   background-color: $Light_Grayish_Blue;
@@ -35,136 +33,108 @@ body {
   font-size: 13px;
 }
 
-.parent{
+.parent {
   background-color: white;
-  max-width: 319px;
-  border-radius: .5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-//   box-shadow: 1px 1px 10px rgba(75, 75, 80, 0.562);
+  width: 319px;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  //   box-shadow: 1px 1px 10px rgba(75, 75, 80, 0.562);
 }
 
 .drawer {
-background: top/cover url('/images/drawers.jpg') no-repeat;
-min-height: 22.8vh;
-filter: brightness(110%) contrast(90%);
-border-radius: .5rem .5rem 0 0;
+  background: top/cover url("/images/drawers.jpg") no-repeat;
+  min-height: 14rem;
+  filter: brightness(110%) contrast(90%);
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
-main, footer{
-    padding: .6rem 2rem;
+main,
+footer {
+  padding: 0.6rem 2rem;
 }
 
-main > *{
-    margin: .5rem;
+main > * {
+  margin: 0.5rem;
 }
 
-h3{
-    color: $Very_Dark_Grayish_Blue;
+h3 {
+  color: $Very_Dark_Grayish_Blue;
 }
 
-main p{
-    color: $Desaturated_Dark_Blue;
+main p {
+  color: $Desaturated_Dark_Blue;
 }
 
 footer {
   @include flex-center();
   min-height: 6vh;
- flex-direction: row;
+  flex-direction: row;
   justify-content: space-around;
   color: $Very_Dark_Grayish_Blue;
   padding: 1rem 2rem;
-  
 
+  .icon {
+    display: block;
+    background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $Light_Grayish_Blue;
+  }
 
-.icon {
-  display: block;
-  background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 1px solid $Light_Grayish_Blue;
- 
-}
-
-.info{
+  .info {
     flex: 1 0;
     margin-left: 1rem;
-}
+  }
 
-.info .date{
+  .info .date {
     color: $Grayis_Blue;
-}
-}
-
-
-.share{
-    @include flex-center();
+  }
 }
 
-.share-option{
-    position: relative;
-    bottom: 8px;
-    right: 3px;
-    color: white;
-    background-color: black;
-    padding: .5rem;
-    border-radius: .3rem;
-    @include flex-center();
-    flex-direction:row;
+.share {
+  @include flex-center();
+}
 
-     box-shadow: 0 5px 20px -5px #0003;
-  transform-origin: bottom;
-  visibility: hidden;
-  transition: all 0.25s ease;
+.share-button {
+  background-color: $Light_Grayish_Blue;
+  width: 25px;
+  height: 25px;
+  @include flex-center();
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.share-button:hover {
+  background-color: $Desaturated_Dark_Blue;
 
+  path {
+    fill: white;
+  }
+}
 
-    &::before{
-        content: '';
-        width: 10px;
-        height:10px;
-        position: relative;
-        background-color: #000000;
-        top: .8rem;
-        left: 4rem;
-        transform: rotate(45deg);
+@media (min-width: 760px) {
+  .parent {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .side-one {
+    width: 909px;
+
+    .drawer {
+      background-position: top left;
+      min-height: 19rem;
+      border-radius: 0.5rem 0 0 0.5rem;
     }
+  }
 
-
-     .socials{
-        padding-right: .5rem;
-        width: 20px;
-    }
-     span {
-        padding: 0 .5rem 0 .5rem;
-        color: grey;
-        font-size: .4rem;
-        letter-spacing: 5px;
-    }
-
-
-}
-
-.share-option.active {
-  scale: 1;
-  display:none;
-}
-
-.share-button{
-background-color: $Light_Grayish_Blue;
-width: 25px;
-height: 25px;
-@include flex-center();
-text-align: center;
-border-radius: 50%;
-cursor: pointer;
-
-}
-
-.share-button:hover{
-    background-color: $Desaturated_Dark_Blue;
-}
-
- path:hover{
-  fill: white;
+  .side-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

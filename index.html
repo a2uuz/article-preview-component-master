@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- displays site properly based on user's device -->
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Article preview component</title>
+   </head>
+   <body>
+      <div class="parent">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Article preview component</title>
-</head>
-<body>
-
-  <div class="parent">
-    <div class="child">
-
-        <div class="drawer"></div>
-
-      <main>
-        <h3>Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home</h3>
         
-    <p>Ever been in a room and felt like something was missing? Perhaps 
-    it felt slightly bare and uninviting. I’ve got some simple tips 
-    to help you make any room feel complete.</p>
-        </main>
+         <div class="side-one">
+           <div class="drawer"></div>
+         </div>
+
+        <div class="side-two">
+         <main>
+            <h3>Shift the overall look and feel by adding these wonderful 
+               touches to furniture in your home
+            </h3>
+            <p>Ever been in a room and felt like something was missing? Perhaps 
+               it felt slightly bare and uninviting. I’ve got some simple tips 
+               to help you make any room feel complete.
+            </p>
+         </main>
          <footer>
-      <div class="icon">
+            <div class="icon"></div>
+
+            <div class="info">
+               <strong class="name">Michelle Appleton</strong>
+               <p class="date">28 Jun 2020</p>
+            </div>
+
+            <div class="share">
+               <!-- <div class="share-option">
+                  <span>SHARE</span>
+                  <img src="./images/icon-facebook.svg" alt="facebook"  class="socials">
+                  <img src="./images/icon-twitter.svg" alt="twitter"  class="socials">
+                  <img src="./images/icon-pinterest.svg" alt="pinterest"  class="socials">
+                  </div> -->
+               <div class="share-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                     <path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+                  </svg>
+               </div>
+            </div>
+         </footer>
+         </div>
 
       </div>
-
-      <div class="info">
-        <strong class="name">Michelle Appleton</strong>
-      <p class="date">28 Jun 2020</p>
-      </div>
-
-
-      
-    <div class="share">
-        <!-- <div class="share-option">
-            <span>SHARE</span>
-            <img src="./images/icon-facebook.svg" alt="facebook"  class="socials">
-            <img src="./images/icon-twitter.svg" alt="twitter"  class="socials">
-            <img src="./images/icon-pinterest.svg" alt="pinterest"  class="socials">
-        </div> -->
-        <div class="share-button"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></div>
-    </div>
-
-
-
-    </footer>
-    </div>
-  </div>
-
-  <script src="./app.js"></script>
-</body>
+      <script src="./app.js"></script>
+   </body>
 </html>
