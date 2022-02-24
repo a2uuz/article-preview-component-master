@@ -74,7 +74,7 @@ footer {
   color: $Very_Dark_Grayish_Blue;
   padding: 1rem 2rem;
 
-  .icon {
+  .avatar {
     display: block;
     background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
     width: 35px;
@@ -93,27 +93,114 @@ footer {
   }
 }
 
-.share {
-  @include flex-center();
+
+
+
+
+
+
+
+
+
+
+ 
+ .wrapper{
+ 
+ .icon{
+     text-align: center;
+     cursor: pointer;
+     @include flex-center();
+     position: relative;
+     z-index: 2;
+     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+//  .icon span i{
+//      line-height: 60px;
+//      font-size: 25px;
+// }
+.icon .tooltip{
+     position: absolute;
+     top: 0;
+     z-index: 1;
+     background: #fff;
+     color: #fff;
+     padding: 10px 18px;
+     font-size: 20px;
+     font-weight: 500;
+     border-radius: .5rem;
+     opacity: 0;
+     pointer-events: none;
+     box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+ .icon:hover .tooltip{
+     top: -50px;
+     opacity: 1;
+     pointer-events: auto;
+}
+ .icon .tooltip:before{
+     position: absolute;
+     content: "";
+     height: 15px;
+     width: 15px;
+     background: #fff;
+     left: 50%;
+     bottom: -6px;
+     transform: translateX(-50%) rotate(45deg);
+     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.share-button {
-  background-color: $Light_Grayish_Blue;
-  width: 25px;
-  height: 25px;
-  @include flex-center();
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
+
+ .share:hover .tooltip,  .share:hover .tooltip:before{
+     background: $Very_Dark_Grayish_Blue;
+}
+ .icon {
+     background-color: white;
+     width: 25px;
+     height: 25px;
+     border-radius: 50%;
 }
 
-.share-button:hover {
-  background-color: $Desaturated_Dark_Blue;
-
-  path {
-    fill: white;
-  }
+ .tooltip{
+     display: flex;
+     flex-direction: row;
+     height: 6vh;
+     align-items: center;
+     justify-content: center;
 }
+
+ .socials{
+     padding-right: .5rem;
+     width: 20px;
+}
+ span {
+   color: $Grayis_Blue;
+     padding: 0 .5rem 0 .5rem;
+     font-size: .6rem;
+     letter-spacing: 5px;
+}
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 760px) {
   .parent {

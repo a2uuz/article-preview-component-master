@@ -82,7 +82,7 @@ footer {
   padding: 1rem 2rem;
 }
 
-footer .icon {
+footer .avatar {
   display: block;
   background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
   width: 35px;
@@ -102,7 +102,9 @@ footer .info .date {
   color: #9eafc2;
 }
 
-.share {
+.wrapper .icon {
+  text-align: center;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,36 +118,88 @@ footer .info .date {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.share-button {
-  background-color: #ecf2f8;
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: .5rem;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -50px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .share:hover .tooltip, .wrapper .share:hover .tooltip:before {
+  background: #48556a;
+}
+
+.wrapper .icon {
+  background-color: white;
   width: 25px;
   height: 25px;
+  border-radius: 50%;
+}
+
+.wrapper .tooltip {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 6vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.share-button:hover {
-  background-color: #6d7f97;
+.wrapper .socials {
+  padding-right: .5rem;
+  width: 20px;
 }
 
-.share-button:hover path {
-  fill: white;
+.wrapper span {
+  color: #9eafc2;
+  padding: 0 .5rem 0 .5rem;
+  font-size: .6rem;
+  letter-spacing: 5px;
 }
 
 @media (min-width: 760px) {
