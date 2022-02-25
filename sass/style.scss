@@ -43,7 +43,7 @@ body {
 }
 
 .drawer {
-  background: top/cover url("/images/drawers.jpg") no-repeat;
+  background: top/cover url("../images/drawers.jpg") no-repeat;
   min-height: 14rem;
   filter: brightness(110%) contrast(90%);
   border-radius: 0.5rem 0.5rem 0 0;
@@ -76,7 +76,7 @@ footer {
 
   .avatar {
     display: block;
-    background: center/cover url("/images/avatar-michelle.jpg") no-repeat;
+    background: center/cover url("../images/avatar-michelle.jpg") no-repeat;
     width: 35px;
     height: 35px;
     border-radius: 50%;
