@@ -102,85 +102,73 @@ footer .info .date {
   color: #9eafc2;
 }
 
-.share:hover .options,
-.share:hover .options:before {
-  background: #48556a;
+.share-option {
+  position: relative;
+  bottom: 0.5rem;
+  right: 3px;
+  color: white;
+  background-color: #48556a;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-box-shadow: 0 5px 20px -5px #0003;
+          box-shadow: 0 5px 20px -5px #0003;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  visibility: hidden;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
-.share:hover path {
-  fill: white;
+.share-option::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background-color: #48556a;
+  top: 0.9rem;
+  left: 4.2rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-@media (min-width: 375px) {
-  .share-options .icon {
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    z-index: 2;
-    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background-color: #ecf2f8;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-  }
-  .share-options .icon:hover {
-    background: #6d7f97;
-  }
-  .share-options .icon .options {
-    position: absolute;
-    z-index: -1;
-    padding: 33px 18px;
-    border-radius: 0 0 0.5rem 0.5rem;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    height: 6vh;
-  }
-  .share-options .icon span {
-    color: #9eafc2;
-    padding: 0 0.5rem 0 3.6rem;
-    font-size: 1rem;
-    letter-spacing: 5px;
-  }
-  .share-options .icon .socials {
-    padding-right: 0.5rem;
-    width: 28px;
-  }
-  .share-options .icon:hover .options {
-    padding-right: 4.7rem;
-    right: -2rem;
-    opacity: 1;
-    pointer-events: auto;
-  }
+.share-option .socials {
+  padding-right: 0.5rem;
+  width: 22px;
+}
+
+.share-option span {
+  padding-right: 0.4rem;
+  color: #9eafc2;
+  font-size: 0.6rem;
+  letter-spacing: 5px;
+}
+
+.share-option.active {
+  visibility: visible;
+}
+
+.share-button {
+  background-color: white;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 760px) {
@@ -213,106 +201,6 @@ footer .info .date {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .share-options .icon {
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    z-index: 2;
-    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background-color: #ecf2f8;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-  }
-  .share-options .icon:hover {
-    background: #6d7f97;
-  }
-  .share-options .icon .options {
-    position: absolute;
-    z-index: -1;
-    padding: 33px 18px;
-    border-radius: 0 0 0.5rem 0.5rem;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    height: 6vh;
-  }
-  .share-options .icon span {
-    color: #9eafc2;
-    padding: 0 0.5rem 0 3.6rem;
-    font-size: 1rem;
-    letter-spacing: 5px;
-  }
-  .share-options .icon .socials {
-    padding-right: 0.5rem;
-    width: 28px;
-  }
-  .share-options .icon:hover .options {
-    padding-right: 4.7rem;
-    right: -2rem;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .share-options .icon .options {
-    top: -4rem;
-    z-index: 1;
-    padding: 10px 18px;
-    border-radius: 0.5rem;
-    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .share-options .icon span {
-    padding: 0 0.5rem 0 0.5rem;
-    font-size: 0.6rem;
-  }
-  .share-options .icon .socials {
-    width: 20px;
-  }
-  .share-options .icon:hover .options {
-    padding-right: 1rem;
-    right: -4.5rem;
-  }
-  .share-options .icon .options:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 50%;
-    bottom: -6px;
-    -webkit-transform: translateX(-50%) rotate(45deg);
-            transform: translateX(-50%) rotate(45deg);
-    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 /*# sourceMappingURL=style.css.map */
