@@ -1,5 +1,5 @@
-const shareOption = document.querySelector('.options');
-    let shareButton = document.querySelector('.icon');
+    const shareOption = document.querySelector('.share-option');
+    let shareButton = document.querySelector('svg');
     shareButton.addEventListener('click', function () {
       this.classList.toggle('active');
       shareOption.classList.toggle('active');

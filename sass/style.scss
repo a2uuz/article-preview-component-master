@@ -93,68 +93,82 @@ footer {
   }
 }
 
-
-.share-option {
-  position: relative;
-  bottom: 0.5rem;
-  right: 3px;
-  color: white;
-  background-color: $Very_Dark_Grayish_Blue;
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  @include flex-center();
-  flex-direction: row;
-
-  box-shadow: 0 5px 20px -5px #0003;
-  transform-origin: bottom;
-  visibility: hidden;
-  transition: all 0.25s ease;
-
-  &::before {
-    content: "";
-    width: 10px;
-    height: 10px;
+@mixin share {
+  
+  .icon {
+    //  text-align: center;
+    cursor: pointer;
+    @include flex-center();
     position: relative;
-    background-color: $Very_Dark_Grayish_Blue;
-    top: 0.9rem;
-    left: 4.2rem;
-    transform: rotate(45deg);
-  }
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: $Light_Grayish_Blue;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
 
-  .socials {
-    padding-right: 0.5rem;
-    width: 22px;
+    &:hover {
+      background: $Desaturated_Dark_Blue;
+    }
+
+    .options {
+      position: absolute;
+      z-index: -1;
+      padding: 33px 18px;
+      border-radius:0 0 0.5rem 0.5rem;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      @include flex-center();
+      flex-direction: row;
+      height: 6vh;
+      visibility: hidden;
+
+      &.active{
+        visibility: visible;
+      }
+    }
+    span {
+      color: $Grayis_Blue;
+      padding: 0 0.5rem 0 3.6rem;
+      font-size: 1rem;
+      letter-spacing: 5px;
+    }
+    .socials {
+      padding-right: 0.5rem;
+      width: 28px;
+    }
+
+    // HOVER EFFECT & TOOLPIT ARROW ELEMENT
+
+    &:hover .options {
+      padding-right: 4.7rem;
+      right: -2rem;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    }
+  @content;
+}
+
+
+.share:hover {
+  .options,
+  .options:before {
+    background: $Very_Dark_Grayish_Blue;
   }
-  span {
-    padding-right: 0.4rem;
-    color: $Grayis_Blue;
-    font-size: 0.6rem;
-    letter-spacing: 5px;
+  path {
+    fill: white;
   }
 }
 
-.share-option.active {
-  visibility: visible;
+@media (min-width: 375px){
+  .share-options {
+
+@include share();
 }
 
-.share-button {
-  background-color: rgb(255, 255, 255);
-  width: 23px;
-  height: 23px;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
 }
-
-
-
-// @media (min-width: 375px){
-//   .share-options {
-
-// @include share();
-// }
-
-// }
 
 @media (min-width: 760px) {
   .parent {
@@ -179,10 +193,42 @@ footer {
     justify-content: center;
   }
 
-//   .share-options {
-// @include share();
+  .share-options {
+@include share();
+.icon {
 
+    .options {
+      top: -4rem;
+      z-index: 1;
+      padding: 10px 18px;
+      border-radius: 0.5rem;
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    }
+    span {
+      padding: 0 0.5rem 0 0.5rem;
+      font-size: 0.6rem;
+    }
+    .socials {
+      width: 20px;
+    }
 
-// }
+    // HOVER EFFECT & TOOLPIT ARROW ELEMENT
 
+    &:hover .options {
+     padding-right: 1rem;
+    right: -4.5rem;
+    }
+    .options:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      left: 50%;
+      bottom: -6px;
+      transform: translateX(-50%) rotate(45deg);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}
+}
 }
